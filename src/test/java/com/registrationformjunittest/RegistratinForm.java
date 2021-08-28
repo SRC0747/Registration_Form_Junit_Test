@@ -159,7 +159,6 @@ public class RegistratinForm {
         // by a single space.
 
         System.out.println(output);
-        
         //Checking Junit Happy or Sad Test case.
         RegistratinForm obj = new RegistratinForm();
         obj.happy_sad_Test();
