@@ -96,6 +96,12 @@ public class RegistratinForm {
         }
     }
     
+      //JUnit Parameterised Test Cases.
+    @Test
+    public void parameterised_email_entry_Test(String name) {
+        Pattern p = Pattern.compile("\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b");
+        Matcher m = p.matcher("srcsrk0747@gmail.com");
+    }
     public static void main(String[] args)
     {
 
@@ -159,8 +165,13 @@ public class RegistratinForm {
         // by a single space.
 
         System.out.println(output);
+        
         //Checking Junit Happy or Sad Test case.
         RegistratinForm obj = new RegistratinForm();
         obj.happy_sad_Test();
+        
+         //Checking Parameterised JUnit Test to enter Multiple Email Addresses.
+        String email_address = "srcsrk0747@gmail.com";
+        System.out.println(isValidEmail(email_address));
     }
 }
